@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання006-2</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Завдання:
+        Напишіть сценарій, який вираховує об'єм циліндра за параметрами, які користувач вводить.
+        Для розрахунку використовуйте формулу V = π * r у квадраті * h.
+        Розмістіть на сторінці два поля введення: перше для радіуса циліндра, друге для висоти циліндра.
+        Об'єм циліндра виведіть у тіло сторінки.
+        */
+
+        const Pi = Math.PI;
+
+        const div = document.createElement("div");
+        document.body.append(div);
+        div.textContent = "Об'єм циліндра складає:"
+
+        const p = document.createElement("p");
+        document.body.append(p);
+        const par = document.querySelector("p");
+
+        const input1 = document.createElement("input");
+        input1.classList.add("input1");
+        input1.placeholder = "Введіть значення радіуса циліндра";
+        input1.style.width = "220px";
+        document.body.append(input1);
+
+        const input2 = document.createElement("input");
+        input2.classList.add("input2");
+        input2.placeholder = "Введіть значення висоти циліндра";
+        input2.style.width = "220px";
+        document.body.append(input2);
+
+        const btn = document.createElement("button");
+        document.body.append(btn);
+        btn.textContent = "Прорахувати об'єм цилінда";
+
+        const btnbtn = document.querySelector("button");
+        btnbtn.addEventListener("click", formula);
+        function formula(){
+            par.textContent=Pi*input1.value*input1.value*input2.value;
+        }
+
+    </script>
+</body>
+
+</html>

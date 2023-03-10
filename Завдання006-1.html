@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання006-1</title>
+</head>
+
+<body>
+    <button id="testBtn" onclick="showMess()">Test Button</button>
+    <script>
+        /*
+        Завдання:
+        Додайте для кнопки testBtn обробник на подію click.
+        Обробник має виводити на екран повідомлення Hello world.
+        Додайте обробник трьома різними способами.
+        */
+
+// ==================спосіб 1=====================
+// onclick="showMess()" прописали в button
+        function showMess() {
+            alert('Hello world');
+        }
+// ==============================================
+
+// ==================спосіб 2=====================
+        // const testBtn = document.querySelector("#testBtn");
+        // testBtn.onclick = showMessage;
+        // function showMessage() {
+        //     alert('Hello world');
+        // }
+// ==============================================
+
+// ==================спосіб 3=====================
+        // const testBtn = document.querySelector("#testBtn");
+        // testBtn.addEventListener("click", handler);
+        // function handler(){
+        //     alert('Hello world');
+        // }
+// ==============================================
+
+    </script>
+</body>
+
+</html>
